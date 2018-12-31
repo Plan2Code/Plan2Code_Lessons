@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- © 2018 Curtis A. Warren. All rights reserved.  -->
+    <meta charset="utf-8">
+    <title>Data and the World Lesson Plan - By Curtis A. Warren</title>
+
+    <style>
+      main {
+
+        margin: 0px !important;
+        background-color: steelblue;
+        min-width: 100% !important;
+        min-height: 100% !important;
+
+      }
+
+      .whole-background {
+
+        background-color: steelblue;
+
+      }
+
+      .lesson-section {
+
+        width: 100%;
+        min-height: 80vh;
+        max-height: auto;
+        background-color: black;
+
+      }
+
+      .special-background {
+
+        background-color: skyblue;
+
+      }
+
+      .intro-wrapper {
+
+        background-color: transparent;
+        height: minmax(20vh, auto);
+    	   min-width: 100% !important;
+
+      }
+
+      .two-panel-wrapper {
+
+        display: grid;
+        background-color: skyblue;
+        grid-template-columns: 1fr 1fr;
+        min-height: 40vh;
+        max-height: auto;
+      }
+
+      .one-panel-wrapper {
+
+        display: grid;
+        background-color: skyblue;
+        grid-template-columns: 1fr;
+        min-height: 40vh;
+        max-height: auto;
+      }
+
+
+      .center-text {
+
+        text-align: center;
+
+      }
+
+      .bubble {
+
+        background-color: #FFFFFF;
+        font-size: 20px;
+        font-family: "Helvetica Neue", "Arial Black";
+
+        padding-top: 8px;
+        padding-bottom: 10px;
+
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+
+        border-radius: 20px;
+        margin-bottom: 20px;
+        width: 80%;
+      }
+
+      .interactive-bubble {
+
+        box-shadow: 0px 4px 0px 0px rgba(10, 50, 200, 1);
+
+        background-color: #FFFFFF;
+        font-size: 20px;
+        font-family: "Helvetica Neue", "Arial Black";
+
+        padding-top: 8px;
+        padding-bottom: 10px;
+
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+
+        border-radius: 20px;
+        margin-bottom: 20px;
+        width: 80%;
+      }
+
+      .bubble-square {
+
+        background-color: #FFFFFF;
+        width: 80%;
+        font-size: 20px;
+        font-family: "Helvetica Neue", "Arial Black";
+        padding: 2.5%;
+        margin-bottom: 20px;
+
+        box-shadow: 0px 5px 0px 0px rgba(10, 50, 200, 1);
+
+      }
+
+      .organize {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .title-text {
+
+        font-size: 25px;
+        width: auto;
+        background-color: rgb(0, 115, 215);
+
+        font-family: "Verdana", "Arial Black";
+        font-weight: normal;
+        text-align: center;
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        border-radius: 0px;
+
+        height: auto;
+
+        border: 2px solid white;
+
+      }
+
+      .sub-title-text {
+
+        font-size: 22px;
+        width: auto;
+        background-color: rgb(0, 40, 225);
+
+        font-family: "Verdana", "Arial Black";
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        border-radius: 20px;
+
+        height: auto;
+
+        border: 2px solid white;
+
+      }
+
+      .table-title {
+
+        font-size: 20px;
+        font-family: "Arial Black", Monaco;
+        text-align: center;
+        background-color: #FF9300;
+        border: 5px solid black;
+        color: black;
+        padding: 20px;
+      }
+
+      .poster-title {
+
+        font-size: 20px;
+        font-family: "Arial Black", Monaco;
+        text-align: center;
+        background-color: #FF9300;
+        border: 8px solid white;
+        color: black;
+        padding: 20px;
+
+        width: 80%;
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+
+        margin-bottom: 20px;
+
+
+      }
+
+      .spacing {
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+      }
+
+      .small-spacing {
+
+        padding-top: 5px;
+        padding-bottom: 10px;
+
+      }
+
+      .lesson-header {
+
+        background-color: black;
+        border: solid 10px white;
+        color: white;
+
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "Verdana", "Courier New";
+
+
+      }
+
+      .lesson-footer {
+
+        background-color: black;
+        color: white;
+
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        font-family: "Verdana", "Verdana";
+
+      }
+
+      .underline-link {
+
+            text-decoration: underline;
+      }
+
+      a {
+
+        text-decoration: underline;
+        color: white;
+      }
+
+      #what-is-data:hover::after, #what-is-data:active::after {
+
+        content: " Data is information.";
+        font-weight: bold;
+        line-height: initial;
+
+      }
+
+      #where-is-data:hover::after, #where-is-data:active::after {
+
+        font-weight: bold;
+        content: " Data can be found everywhere.";
+        line-height: initial;
+
+      }
+
+      .light-up {
+
+        background-color: rgba(0, 0, 150, 1);
+
+        border-radius: 0px;
+        width: 100%;
+        height: 60px;
+
+      }
+
+      .light-up:hover {
+
+        color: white;
+        background-color: rgba(0, 150, 150, 1);
+
+
+      }
+
+      a {
+
+        text-decoration: none;
+
+      }
+
+      .space {
+
+
+        height: 60px;
+        width: 100%;
+        background-color: black;
+
+      }
+
+      .quiz-questions-wrapper {
+
+        font-size: 25px;
+        font-weight: 600;
+        font-family: "Courier New";
+        padding-left: 2%;
+        padding-right: 2%;
+
+      }
+      /* Creates checkmarks for correct answers.*/
+      .correct:checked::after {
+
+        display: inline-block;
+
+        font-size: 20px;
+        font-family: "Arial Black";
+
+        color: white;
+        background-color: darkgreen;
+
+        padding-left: 5px;
+        padding-right: 5px;
+
+        text-align: center;
+
+
+        content: "✓";
+
+
+      }
+
+      .try-again:checked::after {
+
+        display: inline-block;
+
+        font-size: 20px;
+        font-family: "Arial Black";
+        color: white;
+        background-color: rgb(220, 0, 20);
+
+        padding-left: 8px;
+        padding-right: 8px;
+
+        border-radius: 0px;
+
+        text-align: center;
+        margin: auto;
+
+        content: "✘";
+
+      }
+
+      .responses {
+
+        padding-left: 2%;
+        padding-right: 2%;
+
+        font-size: 23px;
+        font-family: "Helvetica", "Arial";
+        font-weight: 500;
+        color: black;
+        background-color: skyblue;
+
+      }
+
+      .definition-bubble {
+
+        background-color: #FFFFFF;
+        width: 80%;
+        font-size: 20px;
+        font-family: "Helvetica Neue", "Arial Black";
+        padding-left: 2.0%;
+        padding-right: 2.0%;
+        padding-bottom: 2.0%;
+
+        margin-top: 10px;
+
+        margin-bottom: 10px;
+
+        box-shadow: 0px 5px 0px 0px rgba(10, 50, 0, 1);
+
+      }
+
+      .house-picture {
+
+        width: 50vh;
+        height: auto;
+
+      }
+    </style>
+
+  </head>
+  <body>
+    <main class="whole-background">
+
+      <header class="spacing lesson-header">Data and the World (Teacher's Guide)</header>
+
+      <section  class="spacing" id="section-1">
+
+        <section class="intro-wrapper spacing">
+
+          <div class="organize">
+
+            <div class="organize title-text">
+              Introduction
+            </div>
+
+          </div>
+
+          <div class="organize spacing">
+
+            <div class="bubble-square">
+              In this lecture we are going to <b>learn how to think like a programmer</b>. This is the first step in understanding all other concepts in computer science.
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <div id="lecture" class="special-background organize spacing">
+
+          <div class="organize title-text">
+            Lecture
+          </div>
+
+        </div>
+
+        <section class="spacing two-panel-wrapper">
+
+          <section id="spacing discussion-question-wrapper">
+
+            <div class="organize spacing">
+
+              <div class="organize sub-title-text">
+                Discussion Questions
+              </div>
+
+            </div>
+
+            <div class="organize">
+
+              <div id="what-is-data" class="interactive-bubble center-text">What is data?</div>
+
+            </div>
+
+            <div class="organize spacing">
+
+              <div id="where-is-data" class="interactive-bubble center-text">Where can data be found?</div>
+
+            </div>
+
+          </section>
+
+          <section id="spacing discussion-response-wrapper">
+
+            <div class="organize spacing">
+
+              <div class="sub-title-text">
+                Teacher's Response
+              </div>
+
+            </div>
+
+            <div class="organize">
+
+              <div class="bubble-square">
+                Data is everywhere.
+
+                <ul>
+
+                  <li>The number of students in a classroom,</li>
+                  <li>one’s shoe size,</li>
+                  <li>the title of a book...</li>
+                </ul>
+                ...are all considered data in a computer program.
+              </div>
+
+            </div>
+          </section>
+
+        </section>
+
+        <section class="dots-wrapper">
+
+          <a href="#section-1">
+            <div class="light-up organize">Intro</div>
+          </a>
+          <a href="#lecture">
+            <div class="light-up organize">Lecture</div>
+          </a>
+          <a href="#section-3">
+            <div class="light-up organize">Quiz</div>
+          </a>
+
+        </section>
+
+
+      </section>
+
+      <div class="spacing organize">
+
+        <div class="definition-bubble">
+          <h2>Definitions</h2>
+
+          <p><strong>Data</strong> - is any information that we use to make decisions.</p>
+
+          <p><strong>Data types</strong> - are the categories for the information we use in computer programs.</p>
+
+        </div>
+
+      </div>
+
+      <section class="spacing" id="section-2">
+
+        <div class="special-background organize spacing">
+
+          <div class="title-text">
+            Two Types of Data - Strings and Numbers
+          </div>
+        </div>
+
+        <section class="two-panel-wrapper">
+
+          <section>
+
+            <div class="organize spacing">
+
+              <div class="sub-title-text">
+                Strings
+              </div>
+            </div>
+
+            <div class="organize spacing">
+
+              <div class="bubble-square">
+                Any information that can be described with a collection of letters, numbers, punctuation, or emojis (i.e. words, or phrases).  All of these examples could be described as a <b>string</b> data type in a computer program.
+              </div>
+
+            </div>
+
+            <div class="organize spacing">
+
+              <div class="bubble-square">
+                For example, someone’s name, the title of a book or the contents of a book are all considered to be string data types to a computer program.
+              </div>
+
+            </div>
+          </section>
+
+          <section>
+
+            <div class="organize spacing">
+
+              <div class="sub-title-text">
+                Numbers
+              </div>
+            </div>
+
+            <div class="organize spacing">
+
+              <div class="bubble-square">
+                Any information that has a quantity, can be measured, or has a specific value associated with it could be described as a <b>number</b> data type in a computer program.
+              </div>
+
+            </div>
+
+            <div class="organize spacing">
+
+              <div class="bubble-square">
+                For example, someone’s shoe size (11.5), the number of players on a baseball team, or the temperature outside in degrees Fahrenheit are all considered to be number data types to a computer program.
+              </div>
+
+            </div>
+          </section>
+
+        </section>
+
+      </section>
+
+      <div class="spacing organize">
+
+        <div class="title-text">
+          Activity
+        </div>
+
+      </div>
+
+      <div class="organize">
+
+        <img class="house-picture" src="https://static1.squarespace.com/static/5a1cc36acf81e02d03ca8521/t/5c26d8b021c67c1430166768/1546049735390/house_lesson_data+and+the+world_PNG.png?format=1000w" alt="House">
+        </img>
+
+      </div>
+
+      <div class="organize">
+
+        <div class="organize spacing">
+
+          <div class="bubble-square">
+            <b>Instructions:</b> Find one description from this picture below, that is either a string or a number.
+            <br>
+            <br>
+            <b>Expectations:</b> Let’s find as many pieces of data as possible and don’t worry, the teacher will you help out.
+          </div>
+
+        </div>
+
+      </div>
+
+      <section id="section-3">
+
+
+        <section class="one-panel-wrapper spacing">
+
+
+          <div class="spacing organize">
+
+            <div class="title-text">
+              Self Assessment (Quiz)
+            </div>
+
+          </div>
+          <div class="spacing quiz-questions-wrapper">
+
+            <p>1. Which of the following pieces of information would be considered a string in a computer program. Select all that apply.</p>
+            <div class="responses small-spacing">
+
+              <p>a. The title of a book. <input type="checkbox" class="correct" name="ques_1" value=""></p>
+              <p>b. The amount of blueberries in a bowl of cereal. <input type="checkbox" class="try-again" name="ques_1" value=""></p>
+              <p>c. The name of a company. <input type="checkbox" class="correct" name="ques_1" value=""></p>
+
+            </div>
+
+            <p>2. Which of the following pieces of information would be considered a number in a computer program. Select all that apply.</p>
+            <div class="responses small-spacing">
+
+              <p>a. The height of a building in feet. <input type="checkbox" class="correct" name="ques_2" value=""></p>
+              <p>b. The amount of blueberries in a bowl of cereal. <input type="checkbox" class="correct" name="ques_2" value=""></p>
+              <p>c. The name of a company. <input type="checkbox" class="try-again" name="ques_2" value=""></p>
+
+            </div>
+
+            <p>3. Which of the following pieces of information would be considered a number in a computer program. Select all that apply.</p>
+            <div class="responses small-spacing">
+
+              <p>a. A pet's name. <input type="checkbox" class="try-again" name="ques_3" value=""></p>
+              <p>b. A car's brandname. <input type="checkbox" class="try-again" name="ques_3" value=""></p>
+              <p>c. The amount of battery life on a device. <input type="checkbox" class="correct" name="ques_3" value=""></p>
+
+            </div>
+
+            <p>4. Which of the following pieces of information would be considered a string in a computer program Select all that apply.</p>
+            <div class="responses small-spacing">
+
+              <p>a. The color of a car. <input type="checkbox" class="correct" name="ques_4" value=""></p>
+              <p>b. A car's brandname. <input type="checkbox" class="correct" name="ques_4" value=""></p>
+              <p>c. The amount of battery life on a device. <input type="checkbox" class="try-again" name="ques_4" value=""></p>
+
+            </div>
+
+            <p>5. Which of the following pieces of information would be considered a number in a computer program. Select all that apply.</p>
+            <div class="responses small-spacing">
+
+              <p>a. The value of a smart phone in U.S. dollars. <input type="checkbox" class="correct" name="ques_5" value=""></p>
+              <p>b. The amount of rain that fell this December. <input type="checkbox" class="correct" name="ques_5" value=""></p>
+              <p>c. The percentage of carbon in the atmosphere. <input type="checkbox" class="correct" name="ques_5" value=""></p>
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+      </section>
+
+      <footer class="spacing lesson-footer">
+         <strong>Author:</strong> Curtis A. Warren
+        <br>
+        <br>
+      <strong>Published</strong> December 29th, 2018 at 4:14pm EST
+      <br>
+    <strong>Last Updated</strong> December 29th, 2018 at 4:14pm EST
+    <br>
+        <br>
+        © 2018 Curtis A. Warren. All rights reserved. <br><br><a class="underline-link" href="https://Plan2Code.org">Plan2Code.org</a>
+    <div>
+
+      </footer>
+      </div>
+
+      </main>
+      <!-- © 2018 Curtis A. Warren. All rights reserved.  -->
+
+  </body>
+
+</html>
