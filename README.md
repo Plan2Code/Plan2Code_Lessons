@@ -1,6 +1,6 @@
 # Plan2Code_Lessons
 
-Repo currently contains 1 lesson.
+List of lessons:
 
 # Data and the World Lesson Plan
 
