@@ -1,8 +1,4 @@
-# Plan2Code_Lessons
-
-This repo currently contains 1 lesson.
-
-# Data and the World Lesson Plan
+# Data in the Real World 
 
 By: Curtis A. Warren
 
