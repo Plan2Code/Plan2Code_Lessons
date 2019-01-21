@@ -3,7 +3,6 @@
 
 <head>
   <!-- © 2018 Curtis A. Warren. All rights reserved.  -->
-  <!-- Updated: 1/2/2019 -->
   <meta charset="utf-8">
   <title>Data in the Real World - By Curtis A. Warren</title>
 
@@ -82,6 +81,7 @@
 
         display: inline-block;
         background-color: darkslategrey;
+        font-size: 25px;
         padding-left: 20px;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -97,7 +97,7 @@
     .dots-wrapper {
 
       display: grid;
-      width: 96%;
+      width: 100%;
       text-align: center;
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 2%;
@@ -291,6 +291,7 @@
       color: white;
 
       text-align: center;
+      line-height: 1.4em;
       font-size: 36px;
       font-weight: 500;
       font-family: "Verdana", "Courier New";
@@ -319,22 +320,6 @@
 
       text-decoration: underline;
       color: white;
-    }
-
-    #what-is-data:hover::after {
-
-      content: " Data is information.";
-      font-weight: bold;
-      line-height: initial;
-
-    }
-
-    #where-is-data:hover::after {
-
-      font-weight: bold;
-      content: " Data can be found everywhere.";
-      line-height: initial;
-
     }
 
     .light-up {
@@ -402,6 +387,7 @@
 
       content: "✓";
 
+      border-radius: 20px;
 
     }
 
@@ -416,8 +402,6 @@
 
       padding-left: 8px;
       padding-right: 8px;
-
-      border-radius: 0px;
 
       text-align: center;
       margin: auto;
@@ -459,17 +443,19 @@
 
 
     }
-    /* Leaves space for dock */
-    .dock {
-
-      height: 60px;
-
-    }
 
     .house-picture {
 
       width: 50vh;
       height: auto;
+
+    }
+
+    .dock-space {
+
+      background-color: black;
+      width: 100%;
+      height: 50px;
 
     }
   </style>
@@ -523,6 +509,7 @@
             <div id="what-is-data" class="interactive-bubble center-text">What is data?</div>
 
           </div>
+
 
           <div class="organize spacing">
 
@@ -645,7 +632,7 @@
           <div class="organize spacing">
 
             <div class="bubble-square">
-              For example, someone’s shoe size (11.5), the number of players on a baseball team, or the temperature outside in degrees Fahrenheit are all considered to be number data types to a computer program.
+              For example, someone’s shoe size (e.g. 10.5), the number of players on a baseball team, or the temperature outside in degrees Fahrenheit are all considered to be number data types to a computer program.
             </div>
 
           </div>
@@ -675,7 +662,7 @@
       <div class="organize spacing">
 
         <div class="bubble-square">
-          <b>Instructions:</b> Find one description from this picture below, that is either a string or a number.
+          <b>Instructions:</b> Find one description from this picture above, that is either a string or a number.
           <br>
           <br>
           <b>Expectations:</b> Let’s find as many pieces of data as possible and don’t worry, the teacher will you help out.
@@ -758,15 +745,52 @@
       <br>
       <strong>Published</strong> December 29th, 2018 at 4:14pm EST
       <br>
-      <strong>Last Updated</strong> December 29th, 2018 at 4:14pm EST
+      <strong>Last Updated</strong> January 21st, 2019 at 4:40pm EST
       <br>
       <br> © 2018 Curtis A. Warren. All rights reserved. <br><br><a class="underline-link" href="https://Plan2Code.org">Plan2Code.org</a>
-      <div>
-      <div class="dock"></div>
-    </footer>
-    </div>
 
+    </footer>
+
+    <div class="dock-space">
+
+    </div>
   </main>
+
+  <script>
+
+    let whatIsData = document.getElementById("what-is-data");
+    let whereIsData = document.getElementById("where-is-data");
+
+    whatIsData.onclick = function () {
+
+      if (whatIsData.innerHTML.includes("<strong>")) {
+
+        whatIsData.innerHTML = "What is data?"
+
+      } else {
+
+        whatIsData.innerHTML = "What is data?&nbsp<strong>Data is information.</strong>"
+
+      }
+
+    }
+
+    whereIsData.onclick = function () {
+
+      if (whereIsData.innerHTML.includes("<strong>")) {
+
+        whereIsData.innerHTML = "Where can data be found?"
+
+      } else {
+
+        whereIsData.innerHTML = "Where can data be found?<br><strong>Data can be found everywhere.</strong>"
+
+      }
+
+    }
+
+  </script>
+
   <!-- © 2018 Curtis A. Warren. All rights reserved.  -->
 
 </body>
